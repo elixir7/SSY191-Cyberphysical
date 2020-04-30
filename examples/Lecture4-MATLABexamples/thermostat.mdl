@@ -1,0 +1,584 @@
+Model {
+  Name			  "thermostat"
+  Version		  4.00
+  SampleTimeColors	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  Created		  "Mon Apr 08 00:02:58 2002"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "hespanha"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Mon Apr 08 02:07:22 2002"
+  ModelVersionFormat	  "1.%<AutoIncrement:13>"
+  ConfigurationManager	  "none"
+  SimParamPage		  "Solver"
+  StartTime		  "0.0"
+  StopTime		  "10.0"
+  SolverMode		  "Auto"
+  Solver		  "ode45"
+  RelTol		  "1e-3"
+  AbsTol		  "auto"
+  Refine		  "1"
+  MaxStep		  "auto"
+  MinStep		  "auto"
+  MaxNumMinSteps	  "-1"
+  InitialStep		  "auto"
+  FixedStep		  "auto"
+  MaxOrder		  5
+  OutputOption		  "RefineOutputTimes"
+  OutputTimes		  "[]"
+  LoadExternalInput	  off
+  ExternalInput		  "[t, u]"
+  SaveTime		  on
+  TimeSaveName		  "tout"
+  SaveState		  off
+  StateSaveName		  "xout"
+  SaveOutput		  on
+  OutputSaveName	  "yout"
+  LoadInitialState	  off
+  InitialState		  "xInitial"
+  SaveFinalState	  off
+  FinalStateName	  "xFinal"
+  SaveFormat		  "Array"
+  LimitDataPoints	  on
+  MaxDataPoints		  "1000"
+  Decimation		  "1"
+  AlgebraicLoopMsg	  "warning"
+  MinStepSizeMsg	  "warning"
+  UnconnectedInputMsg	  "warning"
+  UnconnectedOutputMsg	  "warning"
+  UnconnectedLineMsg	  "warning"
+  InheritedTsInSrcMsg	  "warning"
+  SingleTaskRateTransMsg  "none"
+  MultiTaskRateTransMsg	  "error"
+  IntegerOverflowMsg	  "warning"
+  CheckForMatrixSingularity "none"
+  UnnecessaryDatatypeConvMsg "none"
+  Int32ToFloatConvMsg	  "warning"
+  SignalLabelMismatchMsg  "none"
+  LinearizationMsg	  "none"
+  VectorMatrixConversionMsg "none"
+  SfunCompatibilityCheckMsg "none"
+  BlockPriorityViolationMsg "warning"
+  ArrayBoundsChecking	  "none"
+  ConsistencyChecking	  "none"
+  ZeroCross		  on
+  Profile		  off
+  SimulationMode	  "normal"
+  RTWSystemTargetFile	  "grt.tlc"
+  RTWInlineParameters	  off
+  RTWRetainRTWFile	  off
+  RTWTemplateMakefile	  "grt_default_tmf"
+  RTWMakeCommand	  "make_rtw"
+  RTWGenerateCodeOnly	  off
+  TLCProfiler		  off
+  TLCDebug		  off
+  TLCCoverage		  off
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  ExtModeMexFile	  "ext_comm"
+  ExtModeBatchMode	  off
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeLogAll		  on
+  OptimizeBlockIOStorage  on
+  BufferReuse		  on
+  ParameterPooling	  on
+  BlockReductionOpt	  off
+  BooleanDataType	  off
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "thermostat"
+    Location		    [484, 135, 785, 408]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "automatic"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    ZoomFactor		    "100"
+    AutoZoom		    on
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      Constant
+      Name		      "Constant"
+      Position		      [115, 83, 140, 97]
+      ShowName		      off
+      Value		      "60"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      Ground
+      Name		      "Ground"
+      Position		      [120, 147, 140, 163]
+      ShowName		      off
+    }
+    Block {
+      BlockType		      RelationalOperator
+      Name		      "Relational\nOperator"
+      Position		      [120, 170, 140, 185]
+      ShowName		      off
+      Operator		      "~="
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Scope q"
+      Ports		      [1]
+      Position		      [245, 164, 275, 196]
+      Floating		      off
+      Location		      [121, 522, 445, 704]
+      Open		      on
+      NumInputPorts	      "1"
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "yonly"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      Grid		      "on"
+      TimeRange		      "10"
+      YMin		      "0"
+      YMax		      "3"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData1"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Scope x"
+      Ports		      [1]
+      Position		      [250, 59, 280, 91]
+      Floating		      off
+      Location		      [521, 522, 845, 707]
+      Open		      on
+      NumInputPorts	      "1"
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "yonly"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      Grid		      "on"
+      TimeRange		      "10"
+      YMin		      "60"
+      YMax		      "80"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "f(x)"
+      Description	      "f(x)"
+      Ports		      [2, 1]
+      Position		      [45, 46, 95, 64]
+      ShowName		      off
+      ShowPortLabels	      on
+      TreatAsAtomicUnit	      off
+      RTWSystemCode	      "Auto"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      System {
+	Name			"f(x)"
+	Location		[70, 123, 358, 226]
+	Open			on
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	AutoZoom		on
+	Block {
+	  BlockType		  Inport
+	  Name			  "x"
+	  Position		  [20, 53, 50, 67]
+	  Port			  "1"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "q"
+	  Position		  [20, 13, 50, 27]
+	  Port			  "2"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  MultiPortSwitch
+	  Name			  "Multiport\nSwitch"
+	  Ports			  [3, 1]
+	  Position		  [175, 6, 205, 84]
+	  ShowName		  off
+	  Inputs		  "2"
+	}
+	Block {
+	  BlockType		  Fcn
+	  Name			  "off"
+	  Position		  [90, 36, 150, 54]
+	  NamePlacement		  "alternate"
+	  Expr			  "-u[1]+50"
+	}
+	Block {
+	  BlockType		  Fcn
+	  Name			  "on"
+	  Position		  [90, 61, 150, 79]
+	  Expr			  "-u[1]+100"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "f(q,x)"
+	  Position		  [230, 38, 260, 52]
+	  Port			  "1"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Line {
+	  SrcBlock		  "Multiport\nSwitch"
+	  SrcPort		  1
+	  DstBlock		  "f(q,x)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "off"
+	  SrcPort		  1
+	  DstBlock		  "Multiport\nSwitch"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "on"
+	  SrcPort		  1
+	  DstBlock		  "Multiport\nSwitch"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "x"
+	  SrcPort		  1
+	  Points		  [0, 0; 20, 0]
+	  Branch {
+	    DstBlock		    "off"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "on"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "q"
+	  SrcPort		  1
+	  DstBlock		  "Multiport\nSwitch"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "phi"
+      Description	      "f(x)"
+      Ports		      [2, 1]
+      Position		      [45, 196, 95, 214]
+      ShowPortLabels	      on
+      TreatAsAtomicUnit	      off
+      RTWSystemCode	      "Auto"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      System {
+	Name			"phi"
+	Location		[68, 330, 356, 430]
+	Open			on
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	AutoZoom		on
+	Block {
+	  BlockType		  Inport
+	  Name			  "x"
+	  Position		  [20, 53, 50, 67]
+	  Port			  "1"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "q"
+	  Position		  [20, 13, 50, 27]
+	  Port			  "2"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  MultiPortSwitch
+	  Name			  "Multiport\nSwitch"
+	  Ports			  [3, 1]
+	  Position		  [175, 6, 205, 84]
+	  ShowName		  off
+	  Inputs		  "2"
+	}
+	Block {
+	  BlockType		  Fcn
+	  Name			  "off"
+	  Position		  [90, 36, 150, 54]
+	  NamePlacement		  "alternate"
+	  Expr			  "1+(u<=73)"
+	}
+	Block {
+	  BlockType		  Fcn
+	  Name			  "on"
+	  Position		  [90, 61, 150, 79]
+	  Expr			  "2-(u>=77)"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "phi(q,x)"
+	  Position		  [230, 38, 260, 52]
+	  Port			  "1"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Line {
+	  SrcBlock		  "x"
+	  SrcPort		  1
+	  Points		  [20, 0]
+	  Branch {
+	    DstBlock		    "on"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "off"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "on"
+	  SrcPort		  1
+	  DstBlock		  "Multiport\nSwitch"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "off"
+	  SrcPort		  1
+	  DstBlock		  "Multiport\nSwitch"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Multiport\nSwitch"
+	  SrcPort		  1
+	  DstBlock		  "phi(q,x)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "q"
+	  SrcPort		  1
+	  DstBlock		  "Multiport\nSwitch"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      Integrator
+      Name		      "q"
+      Ports		      [3, 1, 0, 0, 1]
+      Position		      [160, 144, 200, 216]
+      NamePlacement	      "alternate"
+      ExternalReset	      "rising"
+      InitialConditionSource  "external"
+      InitialCondition	      "0"
+      LimitOutput	      off
+      UpperSaturationLimit    "inf"
+      LowerSaturationLimit    "-inf"
+      ShowSaturationPort      off
+      ShowStatePort	      on
+      AbsoluteTolerance	      "auto"
+    }
+    Block {
+      BlockType		      InitialCondition
+      Name		      "q(0)"
+      Position		      [120, 220, 150, 250]
+      Orientation	      "left"
+      Value		      "1"
+    }
+    Block {
+      BlockType		      Integrator
+      Name		      "x"
+      Ports		      [2, 1]
+      Position		      [160, 37, 200, 108]
+      NamePlacement	      "alternate"
+      ExternalReset	      "none"
+      InitialConditionSource  "external"
+      InitialCondition	      "0"
+      LimitOutput	      off
+      UpperSaturationLimit    "inf"
+      LowerSaturationLimit    "-inf"
+      ShowSaturationPort      off
+      ShowStatePort	      off
+      AbsoluteTolerance	      "auto"
+    }
+    Line {
+      SrcBlock		      "Constant"
+      SrcPort		      1
+      DstBlock		      "x"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "f(x)"
+      SrcPort		      1
+      DstBlock		      "x"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "x"
+      SrcPort		      1
+      Points		      [0, 0; 10, 0]
+      Branch {
+	DstBlock		"Scope x"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, -55; -200, 0; 0, 30]
+	Branch {
+	  Points		  [0, 150]
+	  DstBlock		  "phi"
+	  DstPort		  1
+	}
+	Branch {
+	  DstBlock		  "f(x)"
+	  DstPort		  1
+	}
+      }
+    }
+    Line {
+      SrcBlock		      "q"
+      SrcPort		      1
+      Points		      [0, 0; 10, 0]
+      Branch {
+	DstBlock		"Scope q"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, -65; -190, 0; 0, -55]
+	DstBlock		"f(x)"
+	DstPort			2
+      }
+    }
+    Line {
+      SrcBlock		      "Ground"
+      SrcPort		      1
+      DstBlock		      "q"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Relational\nOperator"
+      SrcPort		      1
+      DstBlock		      "q"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "phi"
+      SrcPort		      1
+      Points		      [0, 0; 5, 0]
+      Branch {
+	DstBlock		"q"
+	DstPort			3
+      }
+      Branch {
+	DstBlock		"Relational\nOperator"
+	DstPort			2
+      }
+    }
+    Line {
+      SrcBlock		      "q(0)"
+      SrcPort		      1
+      Points		      [-90, 0; 0, -25]
+      Branch {
+	DstBlock		"phi"
+	DstPort			2
+      }
+      Branch {
+	Points			[0, -35]
+	DstBlock		"Relational\nOperator"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "q"
+      SrcPort		      state
+      Points		      [0, 14]
+      DstBlock		      "q(0)"
+      DstPort		      1
+    }
+  }
+}

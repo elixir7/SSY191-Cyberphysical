@@ -1,0 +1,696 @@
+Model {
+  Name			  "thermostat_sf"
+  Version		  4.00
+  SampleTimeColors	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  on
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  Created		  "Sat Apr 06 19:03:50 2002"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "hespanha"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Mon Apr 08 03:36:17 2002"
+  ModelVersionFormat	  "1.%<AutoIncrement:12>"
+  ConfigurationManager	  "none"
+  SimParamPage		  "Solver"
+  StartTime		  "0.0"
+  StopTime		  "10.0"
+  SolverMode		  "Auto"
+  Solver		  "ode45"
+  RelTol		  "1e-1"
+  AbsTol		  "auto"
+  Refine		  "1"
+  MaxStep		  "auto"
+  MinStep		  "auto"
+  MaxNumMinSteps	  "-1"
+  InitialStep		  "auto"
+  FixedStep		  "auto"
+  MaxOrder		  5
+  OutputOption		  "RefineOutputTimes"
+  OutputTimes		  "[]"
+  LoadExternalInput	  off
+  ExternalInput		  "[t, u]"
+  SaveTime		  on
+  TimeSaveName		  "tout"
+  SaveState		  off
+  StateSaveName		  "xout"
+  SaveOutput		  on
+  OutputSaveName	  "yout"
+  LoadInitialState	  off
+  InitialState		  "xInitial"
+  SaveFinalState	  off
+  FinalStateName	  "xFinal"
+  SaveFormat		  "Array"
+  LimitDataPoints	  off
+  MaxDataPoints		  "1000"
+  Decimation		  "1"
+  AlgebraicLoopMsg	  "warning"
+  MinStepSizeMsg	  "warning"
+  UnconnectedInputMsg	  "warning"
+  UnconnectedOutputMsg	  "warning"
+  UnconnectedLineMsg	  "warning"
+  InheritedTsInSrcMsg	  "warning"
+  SingleTaskRateTransMsg  "none"
+  MultiTaskRateTransMsg	  "error"
+  IntegerOverflowMsg	  "warning"
+  CheckForMatrixSingularity "none"
+  UnnecessaryDatatypeConvMsg "none"
+  Int32ToFloatConvMsg	  "warning"
+  SignalLabelMismatchMsg  "none"
+  LinearizationMsg	  "none"
+  VectorMatrixConversionMsg "none"
+  SfunCompatibilityCheckMsg "none"
+  BlockPriorityViolationMsg "warning"
+  ArrayBoundsChecking	  "none"
+  ConsistencyChecking	  "none"
+  ZeroCross		  on
+  Profile		  off
+  SimulationMode	  "normal"
+  RTWSystemTargetFile	  "grt.tlc"
+  RTWInlineParameters	  off
+  RTWRetainRTWFile	  off
+  RTWTemplateMakefile	  "grt_default_tmf"
+  RTWMakeCommand	  "make_rtw"
+  RTWGenerateCodeOnly	  off
+  TLCProfiler		  off
+  TLCDebug		  off
+  TLCCoverage		  off
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  ExtModeMexFile	  "ext_comm"
+  ExtModeBatchMode	  off
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "oneshot"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  off
+  ExtModeLogAll		  on
+  OptimizeBlockIOStorage  on
+  BufferReuse		  on
+  ParameterPooling	  on
+  BlockReductionOpt	  off
+  BooleanDataType	  off
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "thermostat_sf"
+    Location		    [483, 86, 978, 319]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "automatic"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    ZoomFactor		    "100"
+    AutoZoom		    off
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      SubSystem
+      Name		      "Chart"
+      Ports		      [1, 1]
+      Position		      [45, 52, 115, 98]
+      BackgroundColor	      "yellow"
+      NamePlacement	      "alternate"
+      ShowPortLabels	      on
+      TreatAsAtomicUnit	      off
+      RTWSystemCode	      "Auto"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      MaskType		      "Stateflow"
+      MaskDescription	      "Stateflow diagram"
+      MaskDisplay	      "plot(sf('Private','sfblk','xIcon'),sf('Private'"
+",'sfblk','yIcon'));text(0.5,0,sf('Private', 'sfblk', 'tIcon'),'HorizontalAl',"
+"'Center','VerticalAl','Bottom');"
+      MaskSelfModifiable      on
+      MaskIconFrame	      off
+      MaskIconOpaque	      off
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      System {
+	Name			"Chart"
+	Location		[257, 457, 812, 717]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	AutoZoom		on
+	Block {
+	  BlockType		  Inport
+	  Name			  "x"
+	  Position		  [20, 101, 40, 119]
+	  Port			  "1"
+	  PortDimensions	  "1"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Demux
+	  Name			  " Demux "
+	  Ports			  [1, 1]
+	  Position		  [270, 160, 320, 200]
+	  Outputs		  "1"
+	  BusSelectionMode	  off
+	}
+	Block {
+	  BlockType		  "S-Function"
+	  Name			  " SFunction "
+	  Tag			  "Stateflow S-Function thermostat_sf 1"
+	  Ports			  [1, 2]
+	  Position		  [180, 100, 230, 160]
+	  FunctionName		  "sf_sfun"
+	  PortCounts		  "[1 2]"
+	  SFunctionModules	  "''"
+	}
+	Block {
+	  BlockType		  Terminator
+	  Name			  " Terminator "
+	  Position		  [460, 171, 480, 189]
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "q"
+	  Position		  [460, 101, 480, 119]
+	  Port			  "1"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Line {
+	  SrcBlock		  " SFunction "
+	  SrcPort		  1
+	  Points		  [0, 65]
+	  DstBlock		  " Demux "
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  " Demux "
+	  SrcPort		  1
+	  DstBlock		  " Terminator "
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "x"
+	  SrcPort		  1
+	  DstBlock		  " SFunction "
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  " SFunction "
+	  SrcPort		  2
+	  DstBlock		  "q"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      HitCross
+      Name		      "Hit \nCrossing"
+      Ports		      [1, 1]
+      Position		      [360, 145, 390, 175]
+      ShowName		      off
+      HitCrossingOffset	      "77"
+      HitCrossingDirection    "rising"
+      ShowOutputPort	      on
+    }
+    Block {
+      BlockType		      HitCross
+      Name		      "Hit \nCrossing1"
+      Ports		      [1, 1]
+      Position		      [355, 190, 385, 220]
+      ShowName		      off
+      HitCrossingOffset	      "73"
+      HitCrossingDirection    "falling"
+      ShowOutputPort	      on
+    }
+    Block {
+      BlockType		      Integrator
+      Name		      "Integrator"
+      Ports		      [1, 1]
+      Position		      [285, 95, 315, 125]
+      ShowName		      off
+      ExternalReset	      "none"
+      InitialConditionSource  "internal"
+      InitialCondition	      "0"
+      LimitOutput	      off
+      UpperSaturationLimit    "inf"
+      LowerSaturationLimit    "-inf"
+      ShowSaturationPort      off
+      ShowStatePort	      off
+      AbsoluteTolerance	      "auto"
+    }
+    Block {
+      BlockType		      MultiPortSwitch
+      Name		      "Multiport\nSwitch"
+      Ports		      [3, 1]
+      Position		      [210, 76, 240, 144]
+      ShowName		      off
+      Inputs		      "2"
+    }
+    Block {
+      BlockType		      Fcn
+      Name		      "off"
+      Position		      [130, 101, 190, 119]
+      NamePlacement	      "alternate"
+      Expr		      "-u[1]+50"
+    }
+    Block {
+      BlockType		      Fcn
+      Name		      "on"
+      Position		      [130, 121, 190, 139]
+      Expr		      "-u[1]+100"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "q"
+      Ports		      [1]
+      Position		      [155, 20, 185, 50]
+      Orientation	      "up"
+      Floating		      off
+      Location		      [418, 478, 742, 717]
+      Open		      off
+      NumInputPorts	      "1"
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      Grid		      "on"
+      TimeRange		      "10"
+      YMin		      "0"
+      YMax		      "3"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "x"
+      Ports		      [1]
+      Position		      [380, 94, 410, 126]
+      Floating		      off
+      Location		      [64, 477, 388, 716]
+      Open		      on
+      NumInputPorts	      "1"
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      Grid		      "on"
+      TimeRange		      "10"
+      YMin		      "0"
+      YMax		      "80"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "x1"
+      Ports		      [1]
+      Position		      [415, 144, 445, 176]
+      Floating		      off
+      Location		      [72, 198, 396, 437]
+      Open		      on
+      NumInputPorts	      "1"
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      Grid		      "on"
+      TimeRange		      "10"
+      YMin		      "-1"
+      YMax		      "2"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData1"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "x2"
+      Ports		      [1]
+      Position		      [415, 189, 445, 221]
+      Floating		      off
+      Location		      [421, 196, 745, 436]
+      Open		      off
+      NumInputPorts	      "1"
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      Grid		      "on"
+      TimeRange		      "10"
+      YMin		      "-1"
+      YMax		      "2"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData2"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Line {
+      SrcBlock		      "Multiport\nSwitch"
+      SrcPort		      1
+      DstBlock		      "Integrator"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Chart"
+      SrcPort		      1
+      Points		      [50, 0]
+      Branch {
+	Points			[25, 0]
+	DstBlock		"Multiport\nSwitch"
+	DstPort			1
+      }
+      Branch {
+	DstBlock		"q"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "off"
+      SrcPort		      1
+      DstBlock		      "Multiport\nSwitch"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "on"
+      SrcPort		      1
+      DstBlock		      "Multiport\nSwitch"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "Integrator"
+      SrcPort		      1
+      Points		      [20, 0]
+      Branch {
+	DstBlock		"x"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 50]
+	Branch {
+	  Points		  [-310, 0; 0, -30]
+	  Branch {
+	    Points		    [0, -20]
+	    Branch {
+	      DstBlock		      "Chart"
+	      DstPort		      1
+	    }
+	    Branch {
+	      DstBlock		      "off"
+	      DstPort		      1
+	    }
+	  }
+	  Branch {
+	    DstBlock		    "on"
+	    DstPort		    1
+	  }
+	}
+	Branch {
+	  DstBlock		  "Hit \nCrossing"
+	  DstPort		  1
+	}
+	Branch {
+	  DstBlock		  "Hit \nCrossing1"
+	  DstPort		  1
+	}
+      }
+    }
+    Line {
+      SrcBlock		      "Hit \nCrossing"
+      SrcPort		      1
+      DstBlock		      "x1"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Hit \nCrossing1"
+      SrcPort		      1
+      DstBlock		      "x2"
+      DstPort		      1
+    }
+    Annotation {
+      Position		      [331, 94]
+      Text		      "x"
+    }
+    Annotation {
+      Position		      [260, 95]
+      Text		      "x dot"
+    }
+  }
+}
+
+# Finite State Machines
+# -- File save dated 08-Apr-2002 03:36:18
+#
+#    Stateflow Version 4.0 (R12) dated Oct  4 2000, 19:47:56
+#
+#
+
+Stateflow {
+
+	machine {
+		id                   		1
+		name                 		"thermostat_sf"
+		created              		"06-Apr-2002 19:05:04"
+		firstTarget          		11
+		debug {
+			breakOn              		[1 0 1]
+		}
+		sfVersion            		40012071
+	}
+
+	chart {
+		id                       		2
+		name                     		"Chart"
+		windowPosition           		[444 51 207 204.75]
+		viewLimits               		[0 196.132 0 202.43]
+		zoomFactor               		1.2
+		screen                   		[1 1 1024 768 1.333333333333333]
+		treeNode                 		[0 3 0 0]
+		firstTransition          		5
+		viewObj                  		2
+		visible                  		1
+		machine                  		1
+		subviewS {
+		}
+		decomposition            		CLUSTER_CHART
+		firstData                		8
+		debug                    		[1]
+		chartFileNumber          		1
+	}
+
+	state {
+		id             		3
+		labelString    		"off/\n"
+						"entry:q=1;"
+		position       		[19.167 47.632 90 60]
+		fontSize       		10
+		chart          		2
+		treeNode       		[2 0 0 4]
+		subviewer      		2
+		type           		OR_STATE
+		decomposition  		CLUSTER_STATE
+	}
+
+	state {
+		id             		4
+		labelString    		"on/\n"
+						"entry:q=2;"
+		position       		[76.446 134.748 90 60]
+		fontSize       		10
+		chart          		2
+		treeNode       		[2 0 3 0]
+		subviewer      		2
+		type           		OR_STATE
+		decomposition  		CLUSTER_STATE
+	}
+
+	transition {
+		id             		5
+		labelPosition  		[59.33 17.538 8.06 16.12]
+		fontSize       		12.5
+		src {
+			intersection		[0 -1 0 0 37.71620645447126 10.13188777556127 0]
+		}
+		dst {
+			id          		3
+			intersection		[1 0 -1 0.2061115681703917 37.71670645447124 47.63163283487231 
+								  0]
+		}
+		midPoint       		[32.16841324332638 14.8397039997743]
+		chart          		2
+		linkNode       		[2 0 6]
+		dataLimits     		[30.435 40.117 10.132 47.632]
+		subviewer      		2
+	}
+
+	transition {
+		id             		6
+		labelString    		"[x<=73]"
+		labelPosition  		[119.356 60.288 34.032 14.329]
+		fontSize       		10
+		src {
+			id          		3
+			intersection		[2 1 0 0.5 109.166665319136 77.63163283487231 0]
+		}
+		dst {
+			id          		4
+			intersection		[1 0 -1 0.8444273047214229 152.4445319086123 134.7483280442904 
+								  0]
+		}
+		midPoint       		[130.7026650005864 84.62755807604786]
+		chart          		2
+		linkNode       		[2 5 7]
+		dataLimits     		[109.167 154.845 77.632 134.748]
+		subviewer      		2
+	}
+
+	transition {
+		id             		7
+		labelString    		"[x>=77]"
+		labelPosition  		[28.778 165.097 34.032 14.329]
+		fontSize       		10
+		src {
+			id          		4
+			intersection		[4 -1 0 0.4250000000000014 76.44607448368423 169.2483280442903 
+								  0]
+		}
+		dst {
+			id          		3
+			intersection		[3 0 1 0.75 41.66666531913599 107.6316328348723 0]
+		}
+		midPoint       		[57.21767082722548 160.6832145563785]
+		chart          		2
+		linkNode       		[2 6 0]
+		dataLimits     		[39.267 76.446 107.632 169.248]
+		subviewer      		2
+	}
+
+	data {
+		id               		8
+		name             		"q"
+		linkNode         		[2 0 9]
+		scope            		OUTPUT_DATA
+		machine          		1
+		dataType         		"int8"
+		props {
+			range {
+				minimum		""
+				maximum		""
+			}
+		}
+	}
+
+	data {
+		id               		9
+		name             		"x"
+		linkNode         		[2 8 0]
+		scope            		INPUT_DATA
+		machine          		1
+		dataType         		"double"
+		props {
+			range {
+				minimum		""
+				maximum		""
+			}
+		}
+	}
+
+	instance {
+		id     		10
+		name   		"Chart"
+		machine		1
+		chart  		2
+	}
+
+	target {
+		id               		11
+		name             		"sfun"
+		description      		"Default Simulink S-Function Target."
+		machine          		1
+		linkNode         		[1 0 0]
+	}
+}

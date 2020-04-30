@@ -1,0 +1,17 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "Compile & Run Sched",
+            "command": "gcc -o sched.out sched.c -lm && ./sched.out",
+            "group": "build"
+        },
+        {
+            "type": "shell",
+            "label": "Compile Sched",
+            "command": "gcc -o sched.out sched.c -lm -g",
+            "group": "build"
+        }
+    ]
+}

@@ -1,0 +1,888 @@
+Model {
+  Name			  "tank"
+  Version		  4.00
+  SampleTimeColors	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  Created		  "Mon Apr 08 00:41:13 2002"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "hespanha"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Mon Apr 08 01:25:00 2002"
+  ModelVersionFormat	  "1.%<AutoIncrement:13>"
+  ConfigurationManager	  "none"
+  SimParamPage		  "Optimization"
+  StartTime		  "0.0"
+  StopTime		  "10.0"
+  SolverMode		  "Auto"
+  Solver		  "ode45"
+  RelTol		  "1e-3"
+  AbsTol		  "auto"
+  Refine		  "1"
+  MaxStep		  "auto"
+  MinStep		  "auto"
+  MaxNumMinSteps	  "-1"
+  InitialStep		  "auto"
+  FixedStep		  "auto"
+  MaxOrder		  5
+  OutputOption		  "RefineOutputTimes"
+  OutputTimes		  "[]"
+  LoadExternalInput	  off
+  ExternalInput		  "[t, u]"
+  SaveTime		  on
+  TimeSaveName		  "tout"
+  SaveState		  off
+  StateSaveName		  "xout"
+  SaveOutput		  on
+  OutputSaveName	  "yout"
+  LoadInitialState	  off
+  InitialState		  "xInitial"
+  SaveFinalState	  off
+  FinalStateName	  "xFinal"
+  SaveFormat		  "Array"
+  LimitDataPoints	  on
+  MaxDataPoints		  "1000"
+  Decimation		  "1"
+  AlgebraicLoopMsg	  "warning"
+  MinStepSizeMsg	  "warning"
+  UnconnectedInputMsg	  "warning"
+  UnconnectedOutputMsg	  "warning"
+  UnconnectedLineMsg	  "warning"
+  InheritedTsInSrcMsg	  "warning"
+  SingleTaskRateTransMsg  "none"
+  MultiTaskRateTransMsg	  "error"
+  IntegerOverflowMsg	  "warning"
+  CheckForMatrixSingularity "none"
+  UnnecessaryDatatypeConvMsg "none"
+  Int32ToFloatConvMsg	  "warning"
+  SignalLabelMismatchMsg  "none"
+  LinearizationMsg	  "none"
+  VectorMatrixConversionMsg "none"
+  SfunCompatibilityCheckMsg "none"
+  BlockPriorityViolationMsg "warning"
+  ArrayBoundsChecking	  "none"
+  ConsistencyChecking	  "none"
+  ZeroCross		  on
+  Profile		  off
+  SimulationMode	  "normal"
+  RTWSystemTargetFile	  "grt.tlc"
+  RTWInlineParameters	  off
+  RTWRetainRTWFile	  off
+  RTWTemplateMakefile	  "grt_default_tmf"
+  RTWMakeCommand	  "make_rtw"
+  RTWGenerateCodeOnly	  off
+  TLCProfiler		  off
+  TLCDebug		  off
+  TLCCoverage		  off
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  ExtModeMexFile	  "ext_comm"
+  ExtModeBatchMode	  off
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeLogAll		  on
+  OptimizeBlockIOStorage  on
+  BufferReuse		  on
+  ParameterPooling	  on
+  BlockReductionOpt	  off
+  BooleanDataType	  off
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "tank"
+    Location		    [515, 79, 860, 368]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "automatic"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    ZoomFactor		    "100"
+    AutoZoom		    on
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      Ground
+      Name		      "Ground"
+      Position		      [125, 152, 145, 168]
+      ShowName		      off
+    }
+    Block {
+      BlockType		      RelationalOperator
+      Name		      "Relational\nOperator"
+      Position		      [125, 175, 145, 190]
+      ShowName		      off
+      Operator		      "~="
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Scope q"
+      Ports		      [1]
+      Position		      [265, 169, 295, 201]
+      Floating		      off
+      Location		      [155, 499, 361, 656]
+      Open		      on
+      NumInputPorts	      "1"
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "yonly"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      Grid		      "on"
+      TimeRange		      "10"
+      YMin		      "0"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData1"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Scope x"
+      Ports		      [1]
+      Position		      [265, 59, 295, 91]
+      Floating		      off
+      Location		      [520, 459, 844, 698]
+      Open		      on
+      NumInputPorts	      "1"
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "yonly"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      Grid		      "on"
+      TimeRange		      "10"
+      YMin		      "-1"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "f(x)"
+      Description	      "f(x)"
+      Ports		      [2, 1]
+      Position		      [50, 41, 100, 59]
+      ShowName		      off
+      ShowPortLabels	      on
+      TreatAsAtomicUnit	      off
+      RTWSystemCode	      "Auto"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      System {
+	Name			"f(x)"
+	Location		[127, 85, 430, 202]
+	Open			on
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	AutoZoom		on
+	Block {
+	  BlockType		  Inport
+	  Name			  "x"
+	  Position		  [20, 68, 50, 82]
+	  Port			  "1"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "q"
+	  Position		  [20, 28, 50, 42]
+	  NamePlacement		  "alternate"
+	  Port			  "2"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant1"
+	  Position		  [125, 72, 165, 88]
+	  ShowName		  off
+	  Value			  "[3-1;0]"
+	  VectorParams1D	  on
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant2"
+	  Position		  [125, 87, 165, 103]
+	  ShowName		  off
+	  Value			  "[3-1;1]"
+	  VectorParams1D	  on
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant3"
+	  Position		  [125, 42, 165, 58]
+	  ShowName		  off
+	  Value			  "[-1;0]"
+	  VectorParams1D	  on
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant4"
+	  Position		  [125, 57, 165, 73]
+	  ShowName		  off
+	  Value			  "[-1;1]"
+	  VectorParams1D	  on
+	}
+	Block {
+	  BlockType		  MultiPortSwitch
+	  Name			  "Multiport\nSwitch"
+	  Ports			  [5, 1]
+	  Position		  [190, 31, 220, 99]
+	  ShowName		  off
+	  Inputs		  "4"
+	}
+	Block {
+	  BlockType		  Terminator
+	  Name			  "Terminator"
+	  Position		  [70, 65, 90, 85]
+	  ShowName		  off
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "f(q,x)"
+	  Position		  [245, 58, 275, 72]
+	  Port			  "1"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Line {
+	  SrcBlock		  "q"
+	  SrcPort		  1
+	  Points		  [120, 0]
+	  DstBlock		  "Multiport\nSwitch"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Constant3"
+	  SrcPort		  1
+	  DstBlock		  "Multiport\nSwitch"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Multiport\nSwitch"
+	  SrcPort		  1
+	  DstBlock		  "f(q,x)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Constant4"
+	  SrcPort		  1
+	  DstBlock		  "Multiport\nSwitch"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Constant1"
+	  SrcPort		  1
+	  DstBlock		  "Multiport\nSwitch"
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "Constant2"
+	  SrcPort		  1
+	  DstBlock		  "Multiport\nSwitch"
+	  DstPort		  5
+	}
+	Line {
+	  SrcBlock		  "x"
+	  SrcPort		  1
+	  DstBlock		  "Terminator"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "phi"
+      Description	      "f(x)"
+      Ports		      [2, 1]
+      Position		      [50, 201, 100, 219]
+      ShowPortLabels	      on
+      TreatAsAtomicUnit	      off
+      RTWSystemCode	      "Auto"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      System {
+	Name			"phi"
+	Location		[127, 545, 429, 649]
+	Open			on
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	AutoZoom		on
+	Block {
+	  BlockType		  Inport
+	  Name			  "x"
+	  Position		  [20, 53, 50, 67]
+	  Port			  "1"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "q"
+	  Position		  [20, 13, 50, 27]
+	  Port			  "2"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  MultiPortSwitch
+	  Name			  "Multiport\nSwitch"
+	  Ports			  [5, 1]
+	  Position		  [195, 16, 225, 84]
+	  ShowName		  off
+	  Inputs		  "4"
+	}
+	Block {
+	  BlockType		  Fcn
+	  Name			  "off"
+	  Position		  [90, 29, 170, 41]
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  Expr			  "1+(u[1] <= 1)"
+	}
+	Block {
+	  BlockType		  Fcn
+	  Name			  "off1"
+	  Position		  [90, 44, 170, 56]
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  Expr			  "2+(u[2] >= .5)"
+	}
+	Block {
+	  BlockType		  Fcn
+	  Name			  "off2"
+	  Position		  [90, 74, 170, 86]
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  Expr			  "4-3*(u[2] >= .5)"
+	}
+	Block {
+	  BlockType		  Fcn
+	  Name			  "off3"
+	  Position		  [90, 59, 170, 71]
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  Expr			  "3+(u[1] >= 2)"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "phi(q,x)"
+	  Position		  [250, 43, 280, 57]
+	  Port			  "1"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Line {
+	  SrcBlock		  "q"
+	  SrcPort		  1
+	  Points		  [125, 0]
+	  DstBlock		  "Multiport\nSwitch"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Multiport\nSwitch"
+	  SrcPort		  1
+	  DstBlock		  "phi(q,x)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "off"
+	  SrcPort		  1
+	  DstBlock		  "Multiport\nSwitch"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "off1"
+	  SrcPort		  1
+	  DstBlock		  "Multiport\nSwitch"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "off3"
+	  SrcPort		  1
+	  DstBlock		  "Multiport\nSwitch"
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "x"
+	  SrcPort		  1
+	  Points		  [20, 0]
+	  Branch {
+	    DstBlock		    "off"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "off1"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 5]
+	    Branch {
+	      DstBlock		      "off3"
+	      DstPort		      1
+	    }
+	    Branch {
+	      DstBlock		      "off2"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Line {
+	  SrcBlock		  "off2"
+	  SrcPort		  1
+	  DstBlock		  "Multiport\nSwitch"
+	  DstPort		  5
+	}
+      }
+    }
+    Block {
+      BlockType		      Integrator
+      Name		      "q"
+      Ports		      [3, 1, 0, 0, 1]
+      Position		      [165, 149, 205, 221]
+      NamePlacement	      "alternate"
+      ExternalReset	      "rising"
+      InitialConditionSource  "external"
+      InitialCondition	      "0"
+      LimitOutput	      off
+      UpperSaturationLimit    "inf"
+      LowerSaturationLimit    "-inf"
+      ShowSaturationPort      off
+      ShowStatePort	      on
+      AbsoluteTolerance	      "auto"
+    }
+    Block {
+      BlockType		      InitialCondition
+      Name		      "q(0)"
+      Position		      [125, 230, 155, 260]
+      Orientation	      "left"
+      Value		      "1"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "rho"
+      Description	      "f(x)"
+      Ports		      [2, 1]
+      Position		      [50, 91, 100, 109]
+      ShowPortLabels	      on
+      TreatAsAtomicUnit	      off
+      RTWSystemCode	      "Auto"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      System {
+	Name			"rho"
+	Location		[129, 307, 429, 444]
+	Open			on
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	AutoZoom		on
+	Block {
+	  BlockType		  Inport
+	  Name			  "x"
+	  Position		  [20, 93, 50, 107]
+	  Port			  "1"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "q"
+	  Position		  [20, 53, 50, 67]
+	  Port			  "2"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Demux
+	  Name			  "Demux"
+	  Ports			  [1, 2]
+	  Position		  [80, 16, 85, 54]
+	  BackgroundColor	  "black"
+	  ShowName		  off
+	  Outputs		  "2"
+	  BusSelectionMode	  off
+	}
+	Block {
+	  BlockType		  MultiPortSwitch
+	  Name			  "Multiport\nSwitch"
+	  Ports			  [5, 1]
+	  Position		  [140, 55, 170, 125]
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  Inputs		  "4"
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux"
+	  Ports			  [2, 1]
+	  Position		  [195, 16, 200, 54]
+	  ShowName		  off
+	  Inputs		  "2"
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  Terminator
+	  Name			  "Terminator"
+	  Position		  [100, 35, 120, 55]
+	  ShowName		  off
+	}
+	Block {
+	  BlockType		  Fcn
+	  Name			  "off"
+	  Position		  [90, 69, 115, 81]
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  Expr			  "0"
+	}
+	Block {
+	  BlockType		  Fcn
+	  Name			  "off1"
+	  Position		  [90, 84, 115, 96]
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  Expr			  "u[2]"
+	}
+	Block {
+	  BlockType		  Fcn
+	  Name			  "off2"
+	  Position		  [90, 113, 115, 127]
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  Expr			  "u[2]"
+	}
+	Block {
+	  BlockType		  Fcn
+	  Name			  "off3"
+	  Position		  [90, 99, 115, 111]
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  Expr			  "0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "rho(q,x)"
+	  Position		  [225, 28, 255, 42]
+	  Port			  "1"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Line {
+	  SrcBlock		  "off2"
+	  SrcPort		  1
+	  DstBlock		  "Multiport\nSwitch"
+	  DstPort		  5
+	}
+	Line {
+	  SrcBlock		  "x"
+	  SrcPort		  1
+	  Points		  [0, 0; 5, 0]
+	  Branch {
+	    Points		    [15, 0]
+	    Branch {
+	      Points		      [0, 5]
+	      Branch {
+		DstBlock		"off2"
+		DstPort			1
+	      }
+	      Branch {
+		DstBlock		"off3"
+		DstPort			1
+	      }
+	    }
+	    Branch {
+	      DstBlock		      "off1"
+	      DstPort		      1
+	    }
+	    Branch {
+	      DstBlock		      "off"
+	      DstPort		      1
+	    }
+	  }
+	  Branch {
+	    Points		    [0, -65]
+	    DstBlock		    "Demux"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "off3"
+	  SrcPort		  1
+	  DstBlock		  "Multiport\nSwitch"
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "off1"
+	  SrcPort		  1
+	  DstBlock		  "Multiport\nSwitch"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "off"
+	  SrcPort		  1
+	  DstBlock		  "Multiport\nSwitch"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "q"
+	  SrcPort		  1
+	  DstBlock		  "Multiport\nSwitch"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Mux"
+	  SrcPort		  1
+	  DstBlock		  "rho(q,x)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  1
+	  Points		  [90, 0]
+	  DstBlock		  "Mux"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Multiport\nSwitch"
+	  SrcPort		  1
+	  Points		  [5, 0]
+	  DstBlock		  "Mux"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  2
+	  DstBlock		  "Terminator"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      Integrator
+      Name		      "x"
+      Ports		      [3, 1, 0, 0, 1]
+      Position		      [165, 39, 205, 111]
+      NamePlacement	      "alternate"
+      ExternalReset	      "rising"
+      InitialConditionSource  "external"
+      InitialCondition	      "0"
+      LimitOutput	      off
+      UpperSaturationLimit    "inf"
+      LowerSaturationLimit    "-inf"
+      ShowSaturationPort      off
+      ShowStatePort	      on
+      AbsoluteTolerance	      "auto"
+    }
+    Block {
+      BlockType		      InitialCondition
+      Name		      "x(0)"
+      Position		      [110, 85, 140, 115]
+      NamePlacement	      "alternate"
+      Value		      "[4;0]"
+    }
+    Line {
+      SrcBlock		      "x(0)"
+      SrcPort		      1
+      DstBlock		      "x"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "f(x)"
+      SrcPort		      1
+      DstBlock		      "x"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "x"
+      SrcPort		      1
+      Points		      [0, 0; 10, 0]
+      Branch {
+	DstBlock		"Scope x"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, -55; -190, 0; 0, 25]
+	DstBlock		"f(x)"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "q"
+      SrcPort		      1
+      Points		      [0, 0; 30, 0]
+      Branch {
+	DstBlock		"Scope q"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, -175; -220, 0; 0, 45]
+	DstBlock		"f(x)"
+	DstPort			2
+      }
+    }
+    Line {
+      SrcBlock		      "Ground"
+      SrcPort		      1
+      DstBlock		      "q"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Relational\nOperator"
+      SrcPort		      1
+      Points		      [0, 0]
+      Branch {
+	DstBlock		"q"
+	DstPort			2
+      }
+      Branch {
+	DstBlock		"x"
+	DstPort			2
+      }
+    }
+    Line {
+      SrcBlock		      "phi"
+      SrcPort		      1
+      Points		      [0, 0; 5, 0]
+      Branch {
+	DstBlock		"Relational\nOperator"
+	DstPort			2
+      }
+      Branch {
+	DstBlock		"q"
+	DstPort			3
+      }
+    }
+    Line {
+      SrcBlock		      "q"
+      SrcPort		      state
+      Points		      [0, 19]
+      DstBlock		      "q(0)"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "x"
+      SrcPort		      state
+      Points		      [0, 14; -165, 0]
+      Branch {
+	Points			[0, 75]
+	DstBlock		"phi"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, -35]
+	DstBlock		"rho"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "rho"
+      SrcPort		      1
+      DstBlock		      "x(0)"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "q(0)"
+      SrcPort		      1
+      Points		      [-90, 0; 0, -30; 5, 0]
+      Branch {
+	DstBlock		"phi"
+	DstPort			2
+      }
+      Branch {
+	Points			[-5, 0; 0, -35]
+	Branch {
+	  Points		  [0, -75]
+	  DstBlock		  "rho"
+	  DstPort		  2
+	}
+	Branch {
+	  DstBlock		  "Relational\nOperator"
+	  DstPort		  1
+	}
+      }
+    }
+  }
+}

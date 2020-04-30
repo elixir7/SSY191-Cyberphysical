@@ -1,0 +1,511 @@
+Model {
+  Name			  "ball_nozerocross"
+  Version		  4.00
+  SampleTimeColors	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  Created		  "Sun Apr 07 23:07:45 2002"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "hespanha"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Mon Apr 08 03:32:46 2002"
+  ModelVersionFormat	  "1.%<AutoIncrement:7>"
+  ConfigurationManager	  "none"
+  SimParamPage		  "Solver"
+  StartTime		  "0.0"
+  StopTime		  "8"
+  SolverMode		  "Auto"
+  Solver		  "ode45"
+  RelTol		  "1e-2"
+  AbsTol		  "auto"
+  Refine		  "1"
+  MaxStep		  "auto"
+  MinStep		  "auto"
+  MaxNumMinSteps	  "-1"
+  InitialStep		  "auto"
+  FixedStep		  "auto"
+  MaxOrder		  5
+  OutputOption		  "RefineOutputTimes"
+  OutputTimes		  "[]"
+  LoadExternalInput	  off
+  ExternalInput		  "[t, u]"
+  SaveTime		  on
+  TimeSaveName		  "tout"
+  SaveState		  off
+  StateSaveName		  "xout"
+  SaveOutput		  on
+  OutputSaveName	  "yout"
+  LoadInitialState	  off
+  InitialState		  "xInitial"
+  SaveFinalState	  off
+  FinalStateName	  "xFinal"
+  SaveFormat		  "Array"
+  LimitDataPoints	  on
+  MaxDataPoints		  "1000"
+  Decimation		  "1"
+  AlgebraicLoopMsg	  "warning"
+  MinStepSizeMsg	  "warning"
+  UnconnectedInputMsg	  "warning"
+  UnconnectedOutputMsg	  "warning"
+  UnconnectedLineMsg	  "warning"
+  InheritedTsInSrcMsg	  "warning"
+  SingleTaskRateTransMsg  "none"
+  MultiTaskRateTransMsg	  "error"
+  IntegerOverflowMsg	  "warning"
+  CheckForMatrixSingularity "none"
+  UnnecessaryDatatypeConvMsg "none"
+  Int32ToFloatConvMsg	  "warning"
+  SignalLabelMismatchMsg  "none"
+  LinearizationMsg	  "none"
+  VectorMatrixConversionMsg "none"
+  SfunCompatibilityCheckMsg "none"
+  BlockPriorityViolationMsg "warning"
+  ArrayBoundsChecking	  "none"
+  ConsistencyChecking	  "none"
+  ZeroCross		  off
+  Profile		  off
+  SimulationMode	  "normal"
+  RTWSystemTargetFile	  "grt.tlc"
+  RTWInlineParameters	  off
+  RTWRetainRTWFile	  off
+  RTWTemplateMakefile	  "grt_default_tmf"
+  RTWMakeCommand	  "make_rtw"
+  RTWGenerateCodeOnly	  off
+  TLCProfiler		  off
+  TLCDebug		  off
+  TLCCoverage		  off
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  ExtModeMexFile	  "ext_comm"
+  ExtModeBatchMode	  off
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeLogAll		  on
+  OptimizeBlockIOStorage  on
+  BufferReuse		  on
+  ParameterPooling	  on
+  BlockReductionOpt	  off
+  BooleanDataType	  off
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "ball_nozerocross"
+    Location		    [486, 79, 842, 273]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "automatic"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    ZoomFactor		    "109"
+    AutoZoom		    on
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      InitialCondition
+      Name		      "IC"
+      Position		      [135, 95, 165, 125]
+      Value		      "[10;5]"
+    }
+    Block {
+      BlockType		      Integrator
+      Name		      "Integrator"
+      Ports		      [3, 1, 0, 0, 1]
+      Position		      [195, 50, 235, 120]
+      NamePlacement	      "alternate"
+      ShowName		      off
+      ExternalReset	      "rising"
+      InitialConditionSource  "external"
+      InitialCondition	      "0"
+      LimitOutput	      off
+      UpperSaturationLimit    "inf"
+      LowerSaturationLimit    "-inf"
+      ShowSaturationPort      off
+      ShowStatePort	      on
+      AbsoluteTolerance	      "auto"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Scope"
+      Ports		      [1]
+      Position		      [290, 69, 320, 101]
+      Floating		      off
+      Location		      [554, 388, 878, 627]
+      Open		      on
+      NumInputPorts	      "1"
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "yonly"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      Grid		      "on"
+      TimeRange		      "8"
+      YMin		      "-15"
+      YMax		      "15"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "\\phi"
+      Description	      "f(x)"
+      Ports		      [1, 1]
+      Position		      [55, 76, 105, 94]
+      ShowName		      off
+      ShowPortLabels	      on
+      TreatAsAtomicUnit	      off
+      RTWSystemCode	      "Auto"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      System {
+	Name			"\\phi"
+	Location		[124, 286, 422, 371]
+	Open			on
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"113"
+	AutoZoom		on
+	Block {
+	  BlockType		  Inport
+	  Name			  "x-"
+	  Position		  [15, 28, 45, 42]
+	  Port			  "1"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Fcn
+	  Name			  "Fcn1"
+	  Position		  [75, 26, 185, 44]
+	  ShowName		  off
+	  Expr			  "(u[1]<=0) * (u[2]< 0)"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "x\\in\\phi"
+	  Position		  [220, 28, 250, 42]
+	  Port			  "1"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Line {
+	  SrcBlock		  "x-"
+	  SrcPort		  1
+	  DstBlock		  "Fcn1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Fcn1"
+	  SrcPort		  1
+	  DstBlock		  "x\\in\\phi"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "\\rho(x)"
+      Description	      "f(x)"
+      Ports		      [1, 1]
+      Position		      [55, 101, 105, 119]
+      ShowName		      off
+      ShowPortLabels	      on
+      TreatAsAtomicUnit	      off
+      RTWSystemCode	      "Auto"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      System {
+	Name			"\\rho(x)"
+	Location		[125, 489, 421, 589]
+	Open			on
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"128"
+	AutoZoom		on
+	Block {
+	  BlockType		  Inport
+	  Name			  "x-"
+	  Position		  [25, 33, 55, 47]
+	  Port			  "1"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Fcn
+	  Name			  "Fcn2"
+	  Position		  [100, 22, 140, 38]
+	  ShowName		  off
+	  Expr			  "u[1]"
+	}
+	Block {
+	  BlockType		  Fcn
+	  Name			  "Fcn3"
+	  Position		  [100, 43, 140, 57]
+	  ShowName		  off
+	  Expr			  "-.7*u[2]"
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux1"
+	  Ports			  [2, 1]
+	  Position		  [155, 21, 160, 59]
+	  ShowName		  off
+	  Inputs		  "2"
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "rho(x)"
+	  Position		  [190, 33, 220, 47]
+	  Port			  "1"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Line {
+	  SrcBlock		  "Fcn3"
+	  SrcPort		  1
+	  DstBlock		  "Mux1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Fcn2"
+	  SrcPort		  1
+	  DstBlock		  "Mux1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Mux1"
+	  SrcPort		  1
+	  DstBlock		  "rho(x)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "x-"
+	  SrcPort		  1
+	  Points		  [0, 0; 25, 0]
+	  Branch {
+	    DstBlock		    "Fcn2"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "Fcn3"
+	    DstPort		    1
+	  }
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "f(x)"
+      Description	      "f(x)"
+      Ports		      [1, 1]
+      Position		      [55, 51, 105, 69]
+      ShowName		      off
+      ShowPortLabels	      on
+      TreatAsAtomicUnit	      off
+      RTWSystemCode	      "Auto"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      System {
+	Name			"f(x)"
+	Location		[125, 82, 422, 180]
+	Open			on
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"118"
+	AutoZoom		on
+	Block {
+	  BlockType		  Inport
+	  Name			  "x"
+	  Position		  [20, 23, 50, 37]
+	  Port			  "1"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Fcn
+	  Name			  "Fcn"
+	  Position		  [75, 23, 110, 37]
+	  ShowName		  off
+	  Expr			  "u[2]"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Gravity"
+	  Position		  [75, 42, 110, 58]
+	  Value			  "-9.81"
+	  VectorParams1D	  on
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux"
+	  Ports			  [2, 1]
+	  Position		  [155, 21, 160, 59]
+	  ShowName		  off
+	  Inputs		  "2"
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "f(x)"
+	  Position		  [200, 33, 230, 47]
+	  Port			  "1"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Line {
+	  SrcBlock		  "Mux"
+	  SrcPort		  1
+	  DstBlock		  "f(x)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Gravity"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Fcn"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "x"
+	  SrcPort		  1
+	  DstBlock		  "Fcn"
+	  DstPort		  1
+	}
+      }
+    }
+    Line {
+      SrcBlock		      "IC"
+      SrcPort		      1
+      DstBlock		      "Integrator"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "f(x)"
+      SrcPort		      1
+      DstBlock		      "Integrator"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "\\phi"
+      SrcPort		      1
+      DstBlock		      "Integrator"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Integrator"
+      SrcPort		      state
+      Points		      [0, 30; -180, 0; 0, -45]
+      Branch {
+	DstBlock		"\\rho(x)"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, -25]
+	DstBlock		"\\phi"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "\\rho(x)"
+      SrcPort		      1
+      DstBlock		      "IC"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Integrator"
+      SrcPort		      1
+      Points		      [10, 0]
+      Branch {
+	Points			[0, -55; -215, 0; 0, 30]
+	DstBlock		"f(x)"
+	DstPort			1
+      }
+      Branch {
+	DstBlock		"Scope"
+	DstPort			1
+      }
+    }
+  }
+}

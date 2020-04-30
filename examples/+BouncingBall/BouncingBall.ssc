@@ -1,0 +1,25 @@
+component BouncingBall
+  variables
+    height = {0, 'm'};
+    velocity = {0, 'm/s'};
+  end
+  outputs
+    x1 = {0, 'm'};            % height
+    x2 = {0, 'm/s'};             % velocity
+  end
+  parameters
+    g = {9.81, 'm/s^2'};
+    c = 0.7;             % energy absorbed
+    init_state = [10 5]  % Initial condition [x1 x2]
+  end
+  function setup
+    y = init_state;
+  end
+  
+  equations
+    height.der == velocity;
+    velocity.der == -g;
+    x1 == height;
+    x2 == velocity;
+  end
+end
